@@ -1,0 +1,28 @@
+---
+import FooterComponent from "@/components/footer.astro";
+import HeaderComponent from "@/components/header.astro";
+
+interface Props {
+	pageTitle: string;
+}
+---
+
+<html data-theme="light" lang="pl">
+	<head>
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta charset="utf-8" />
+		<meta name="generator" content={Astro.generator} />
+		<meta
+			name="viewport"
+			content="initial-scale=1, viewport-fit=cover, width=device-width"
+		/>
+		<title>{Astro.props.pageTitle}</title>
+	</head>
+	<body class="overflow-y-scroll">
+		<HeaderComponent />
+		<main>
+			<slot />
+		</main>
+		<FooterComponent />
+	</body>
+</html>

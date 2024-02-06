@@ -1,0 +1,17 @@
+---
+
+---
+
+<header id="headerComponent" class="fixed top-0 min-h-16 w-full backdrop-blur-md"></header>
+
+<script>
+	const headerComponent = document.querySelector("#headerComponent");
+
+	document.addEventListener("scroll", () => {
+		if (document.body.getBoundingClientRect().y >= 0) {
+			headerComponent?.classList.remove("shadow-2xl");
+		} else {
+			headerComponent?.classList.add("shadow-2xl");
+		}
+	});
+</script>
