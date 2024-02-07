@@ -9,7 +9,7 @@ interface Props {
 
 <html data-theme="light" lang="pl">
 	<head>
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="icon" href="/favicon.svg" type="image/svg+xml" />
 		<meta charset="utf-8" />
 		<meta name="generator" content={Astro.generator} />
 		<meta
@@ -20,7 +20,7 @@ interface Props {
 	</head>
 	<body class="overflow-y-scroll">
 		<HeaderComponent />
-		<main>
+		<main class="min-h-screen">
 			<slot />
 		</main>
 		<FooterComponent />
