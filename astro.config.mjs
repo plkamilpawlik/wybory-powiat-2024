@@ -6,5 +6,5 @@ import tailwind from "@astrojs/tailwind";
 
 // https://astro.build/config
 export default defineConfig({
-	integrations: [astroIcon({ include: ["mdi"] }), tailwind()],
+	integrations: [astroIcon({ include: ["gg"] }), tailwind()],
 });

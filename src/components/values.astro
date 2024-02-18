@@ -1,0 +1,80 @@
+---
+
+---
+
+<section
+	id="valuesComponent"
+	class="grid min-h-screen w-full place-content-center pt-64 md:pt-0"
+>
+	<div class="max-w-screen-lg text-center">
+		<h4>Moje wartości</h4>
+	</div>
+	<div class="container grid grid-cols-1 gap-4 pt-24 md:grid-cols-2 lg:grid-cols-4">
+		<div class="draw bg-base-200 p-24 shadow-md"></div>
+		<div class="draw bg-base-200 p-24 shadow-md"></div>
+		<div class="draw bg-base-200 p-24 shadow-md"></div>
+		<div class="draw bg-base-200 p-24 shadow-md"></div>
+	</div>
+</section>
+
+<style>
+	#valuesComponent {
+		background-image: url("/background/values.middle.svg");
+		background-position: top;
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+
+	.draw {
+		border-radius: 12px;
+		transition: all 0.5s;
+		position: relative;
+	}
+
+	.draw::before,
+	.draw::after {
+		content: "";
+		position: absolute;
+		border-radius: 12px;
+		border: 12px solid transparent;
+		height: 0;
+		width: 0;
+	}
+
+	.draw::before {
+		top: 0;
+		left: 0;
+	}
+
+	.draw::after {
+		bottom: 0;
+		right: 0;
+	}
+
+	.draw:hover {
+		transform: translateY(-32px);
+	}
+
+	.draw:hover::before,
+	.draw:hover::after {
+		height: 100%;
+		width: 100%;
+	}
+
+	.draw:hover::before {
+		border-top-color: #ff344b;
+		border-right-color: #ff344b;
+		transition:
+			width 0.25s ease-out,
+			height 0.25s ease-out 0.25s;
+	}
+
+	.draw:hover::after {
+		border-bottom-color: #ff344b;
+		border-left-color: #ff344b;
+		transition:
+			border-color 0s ease-out 0.5s,
+			width 0.25s ease-out 0.5s,
+			height 0.25s ease-out 0.75s;
+	}
+</style>

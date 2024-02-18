@@ -2,19 +2,32 @@
 
 ---
 
-<section id="bannerComponent" class="grid min-h-screen w-full place-content-center">
-	<div class="container grid grid-cols-1 gap-8 lg:grid-cols-2">
-		<div class="h-96 w-96 bg-red-500"></div>
-		<div class="h-96 w-96 bg-red-500"></div>
+<section id="bannerComponent" class="grid min-h-screen w-full place-content-center pt-16">
+	<div class="container my-4 flex flex-wrap items-center justify-center gap-8">
+		<div class="flex flex-col items-center gap-2 tracking-widest">
+			<p class="text-7xl font-extrabold text-white md:text-8xl lg:text-9xl">Kamil</p>
+			<p class="text-7xl font-extrabold text-white md:text-8xl lg:text-9xl">Pawlik</p>
+			<p class="handwriting text-center text-xl text-white">
+				Młodość, Innowacje, Przyszłość<br />Razem Zmieniamy Powiat!
+			</p>
+		</div>
+		<div class="relative m-4">
+			<img class="w-full max-w-[32rem]" src="/images/banner.pose.png" />
+		</div>
 	</div>
 </section>
 
 <style>
-	/* prettier-ignore */
+	@import url("https://fonts.googleapis.com/css2?family=Courgette&display=swap");
+
 	#bannerComponent {
-		background-color: #1f3584;
-		background-image: radial-gradient(#ff344c 1.1px, transparent 1.1px), radial-gradient(#ff344c 1.1px, #1f3584 1.1px);
-		background-position: 0 0, 22px 22px;
-		background-size: 44px 44px;
+		background-image: url("/background/banner.middle.svg");
+		background-position: bottom;
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+
+	.handwriting {
+		font-family: "Courgette", cursive;
 	}
 </style>
