@@ -19,6 +19,7 @@
 	},
 	"devDependencies": {
 		"@iconify-json/gg": "^1.1.9",
+		"@iconify-json/streamline": "^1.1.8",
 		"daisyui": "^4.6.1",
 		"prettier": "^3.2.5",
 		"prettier-plugin-astro": "^0.13.0",
