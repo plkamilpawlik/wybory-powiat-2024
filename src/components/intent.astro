@@ -1,3 +1,22 @@
 ---
-
+import { Icon } from "astro-icon/components";
 ---
+
+<section class="mb-24 grid min-h-screen w-full place-content-center px-4">
+	<div class="mx-auto flex max-w-screen-lg flex-col gap-4 text-center">
+		<h4 class="text-lg font-bold uppercase tracking-tight text-[#ff344b]">
+			Mój plan na nadchodzącą kadencję
+		</h4>
+		<h2 class="text-4xl font-bold tracking-wide">Moje priorytety</h2>
+		<p class="text-lg tracking-widest">
+			Wartości są moim codziennym nawigatorem, pomagającym utrzymać kurs życiowy. Zawsze
+			się nimi kieruję, bo to dla mnie pewność i sens w codziennych wyborach.
+		</p>
+	</div>
+	<div class="container flex flex-wrap justify-center gap-12 pt-16 text-gray-400">
+		<div class="draw flex aspect-video max-w-96 flex-col">
+			<Icon class="text-9xl" name="streamline:health-care-2" />
+			<span class="tracking-wides text-3xl font-bold">Remonty dróg</span>
+		</div>
+	</div>
+</section>

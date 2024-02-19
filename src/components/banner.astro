@@ -2,7 +2,7 @@
 
 ---
 
-<section id="bannerComponent" class="grid min-h-screen w-full place-content-center pt-16">
+<section id="bannerMiddle" class="grid min-h-screen w-full place-content-center pt-16">
 	<div class="container my-4 flex flex-wrap items-center justify-center gap-8">
 		<div class="flex flex-col items-center gap-2 tracking-widest">
 			<p class="text-7xl font-extrabold text-white md:text-8xl lg:text-9xl">Kamil</p>
@@ -17,8 +17,17 @@
 	</div>
 </section>
 
+<section id="bannerBottom" class="aspect-[3/1] w-full"></section>
+
 <style>
-	#bannerComponent {
+	#bannerBottom {
+		background-image: url("/background/banner.bottom.svg");
+		background-position: top;
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+
+	#bannerMiddle {
 		background-image: url("/background/banner.middle.svg");
 		background-position: bottom;
 		background-repeat: no-repeat;

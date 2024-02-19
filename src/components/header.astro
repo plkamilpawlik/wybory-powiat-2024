@@ -20,7 +20,7 @@ import { Icon } from "astro-icon/components";
 			</label>
 		</div>
 	</section>
-	<section class="drawer-side">
+	<section id="navbarDrawerSide" class="drawer-side">
 		<label for="navbarDrawer" aria-label="close sidebar" class="drawer-overlay"></label>
 		<nav class="menu min-h-full w-80 justify-center bg-base-200 p-4 text-base-content">
 			<div class="divider mb-6">Kamil Pawlik</div>
@@ -43,3 +43,9 @@ import { Icon } from "astro-icon/components";
 		}
 	});
 </script>
+
+<style>
+	#navbarDrawerSide {
+		padding-bottom: env(safe-area-inset-bottom);
+	}
+</style>
