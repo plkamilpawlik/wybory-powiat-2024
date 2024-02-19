@@ -1,6 +1,7 @@
 ---
 import FooterComponent from "@/components/footer.astro";
 import HeaderComponent from "@/components/header.astro";
+import "aos/dist/aos.css";
 
 interface Props {
 	pageTitle: string;
@@ -43,5 +44,10 @@ interface Props {
 			<slot />
 		</main>
 		<FooterComponent />
+        <script>
+            import { initAOS } from "@/scripts/aos";
+
+            initAOS();
+        </script>
 	</body>
 </html>
