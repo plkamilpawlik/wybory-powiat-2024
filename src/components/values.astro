@@ -1,5 +1,5 @@
 ---
-import { Icon } from "astro-icon/components";
+import ValuesItemComponent from "@/components/values.item.astro";
 ---
 
 <section class="mb-24 grid min-h-screen w-full place-content-center px-4">
@@ -14,46 +14,18 @@ import { Icon } from "astro-icon/components";
 		</p>
 	</div>
 	<div class="container flex flex-wrap justify-center gap-12 py-16 text-gray-400">
-		<div class="draw flex aspect-square w-64 bg-base-200 shadow-md">
-			<div
-				class="m-auto flex flex-col items-center gap-6"
-				data-aos="fade-up"
-				data-aos-delay="100"
-			>
-				<Icon class="text-6xl" name="streamline:health-care-2" />
-				<span class="tracking-wides text-lg font-bold">Odpowiedzialność</span>
-			</div>
-		</div>
-		<div class="draw flex aspect-square w-64 bg-base-200 shadow-md">
-			<div
-				class="m-auto flex flex-col items-center gap-6"
-				data-aos="fade-up"
-				data-aos-delay="200"
-			>
-				<Icon class="text-6xl" name="streamline:office-worker" />
-				<span class="tracking-wides text-lg font-bold">Pracowitość</span>
-			</div>
-		</div>
-		<div class="draw flex aspect-square w-64 bg-base-200 shadow-md">
-			<div
-				class="m-auto flex flex-col items-center gap-6"
-				data-aos="fade-up"
-				data-aos-delay="300"
-			>
-				<Icon class="text-6xl" name="streamline:book-reading" />
-				<span class="tracking-wides text-lg font-bold">Rzetelność</span>
-			</div>
-		</div>
-		<div class="draw flex aspect-square w-64 bg-base-200 shadow-md">
-			<div
-				class="m-auto flex flex-col items-center gap-6"
-				data-aos="fade-up"
-				data-aos-delay="400"
-			>
-				<Icon class="text-6xl" name="streamline:business-handshake" />
-				<span class="tracking-wides text-lg font-bold">Zaangażowanie</span>
-			</div>
-		</div>
+		<ValuesItemComponent
+			icon="streamline:health-care-2"
+			text="Odpowiedzialność"
+			delay={100}
+		/>
+		<ValuesItemComponent icon="streamline:office-worker" text="Pracowitość" delay={200} />
+		<ValuesItemComponent icon="streamline:book-reading" text="Rzetelność" delay={300} />
+		<ValuesItemComponent
+			icon="streamline:business-handshake"
+			text="Zaangażowanie"
+			delay={400}
+		/>
 	</div>
 	<a href="#" class="btn btn-outline btn-lg mx-auto">Poznaj mnie bliżej</a>
 </section>

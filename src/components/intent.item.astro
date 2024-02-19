@@ -1,0 +1,36 @@
+---
+export interface Props {
+	delay: number;
+	imageAlt: string;
+	imageSrc: string;
+	title: string;
+}
+---
+
+<div class="indent-item-highlight flex max-w-96 flex-col items-center gap-6">
+	<img
+		class="aspect-square w-64"
+		alt={Astro.props.imageAlt}
+		src={Astro.props.imageSrc}
+		data-aos="fade-up"
+		data-aos-delay="100"
+	/>
+	<h3 class="tracking-wides text-3xl font-bold">{Astro.props.title}</h3>
+	<p class="text-center">
+		<slot />
+	</p>
+</div>
+
+<style>
+	.indent-item-highlight {
+		cursor: grab;
+	}
+
+	.indent-item-highlight h3 {
+		transition: all 0.5s;
+	}
+
+	.indent-item-highlight:hover h3 {
+		color: #ff344b;
+	}
+</style>

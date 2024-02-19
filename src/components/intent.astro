@@ -1,11 +1,11 @@
 ---
-
+import IntentItemComponent from "@/components/intent.item.astro";
 ---
 
 <section class="mb-24 grid min-h-screen w-full place-content-center px-4">
 	<div class="mx-auto flex max-w-screen-lg flex-col gap-4 text-center">
 		<h4 class="text-lg font-bold uppercase tracking-tight text-[#ff344b]">
-			Mój plan na nadchodzącą kadencję
+			Plan na nadchodzącą kadencję
 		</h4>
 		<h2 class="text-4xl font-bold tracking-wide">Moje priorytety</h2>
 		<p class="text-lg tracking-widest">
@@ -15,75 +15,54 @@
 		</p>
 	</div>
 	<div class="container mx-auto flex flex-wrap justify-center gap-12 py-16 text-gray-400">
-		<div class="highlight flex max-w-96 flex-col items-center gap-6">
-			<img
-				class="aspect-square w-64"
-				src="/images/intent.education.png"
-				data-aos="fade-up"
-				data-aos-delay="100"
-			/>
-			<h3 class="tracking-wides text-3xl font-bold">Kultura i Edukacja</h3>
-			<p class="text-center">
-				Do niedawna sam byłem uczniem, a obecnie jestem studentem politechniki. Dlatego
-				wiem, jakie problemy trapią nasze szkoły średnie i mam pomysły jak im zaradzić.
-			</p>
-		</div>
-		<div class="highlight flex max-w-96 flex-col items-center gap-6">
-			<img
-				class="aspect-square w-64"
-				src="/images/intent.roads.png"
-				data-aos="fade-up"
-				data-aos-delay="100"
-			/>
-			<h3 class="tracking-wides text-3xl font-bold">Remonty dróg</h3>
-			<p class="text-center">
-				W naszym powiecie niemal każdy zależny jest od transportu drogowego. Dlatego
-				konieczny jest kompleksowych plan prac renowacyjnych i modernizacyjnych na
-				najbliższe lata, aby poprawić bezpieczeństwo i komfort podróży mieszkańców.
-			</p>
-		</div>
-		<div class="highlight flex max-w-96 flex-col items-center gap-6">
-			<img
-				class="aspect-square w-64"
-				src="/images/intent.health.png"
-				data-aos="fade-up"
-				data-aos-delay="100"
-			/>
-			<h3 class="tracking-wides text-3xl font-bold">Zdrowie publiczne</h3>
-			<p class="text-center">
-				Nasz szpital nie działa tak jak trzeba - to wie każdy. Potrzebne są zmiany na
-				stanowiskach kierwoniczych, a ponadto wdrażanie programów zdrowotnych i
-				profilaktycznych oraz zwiększanie dostępności do opieki medycznej.
-			</p>
-		</div>
-		<div class="highlight flex max-w-96 flex-col items-center gap-6">
-			<img
-				class="aspect-square w-64"
-				src="/images/intent.nature.png"
-				data-aos="fade-up"
-				data-aos-delay="100"
-			/>
-			<h3 class="tracking-wides text-3xl font-bold">Ochrona przyrody</h3>
-			<p class="text-center">
-				Troska o środowisko to element lokalnego patriotyzmu. Musimy chronić nasze lasy,
-				łąki i rzeki jako niezastąpiony skarb przyrody i zachować go dla przyszłych
-				pokoleń.
-			</p>
-		</div>
-		<div class="highlight flex max-w-96 flex-col items-center gap-6">
-			<img
-				class="block aspect-square w-64"
-				src="/images/intent.sport.png"
-				data-aos="fade-up"
-				data-aos-delay="100"
-			/>
-			<h3 class="tracking-wides text-3xl font-bold">Sport i Rekreacja</h3>
-			<p class="text-center">
-				Potrzebne nam są inwestycje w nowoczesną infrastrukturę sportową, organizacja
-				lokalnych turniejów i wydarzeń sportowych, aby wspierać aktywny tryb życia
-				mieszkańców.
-			</p>
-		</div>
+		<IntentItemComponent
+			delay={100}
+			imageAlt=""
+			imageSrc="/images/intent.education.png"
+			title="Kultura i Edukacja"
+		>
+			Do niedawna sam byłem uczniem, a obecnie jestem studentem politechniki. Dlatego
+			wiem, jakie problemy trapią nasze szkoły średnie i mam pomysły jak im zaradzić.
+		</IntentItemComponent>
+		<IntentItemComponent
+			delay={100}
+			imageAlt=""
+			imageSrc="/images/intent.roads.png"
+			title="Remonty dróg"
+		>
+			W naszym powiecie niemal każdy zależny jest od transportu drogowego. Dlatego
+			konieczny jest kompleksowych plan prac renowacyjnych i modernizacyjnych na
+			najbliższe lata, aby poprawić bezpieczeństwo i komfort podróży mieszkańców.
+		</IntentItemComponent>
+		<IntentItemComponent
+			delay={100}
+			imageAlt=""
+			imageSrc="/images/intent.health.png"
+			title="Zdrowie publiczne"
+		>
+			Nasz szpital nie działa tak jak trzeba - to wie każdy. Potrzebne są zmiany na
+			stanowiskach kierwoniczych, a ponadto wdrażanie programów zdrowotnych i
+			profilaktycznych oraz zwiększanie dostępności do opieki medycznej.
+		</IntentItemComponent>
+		<IntentItemComponent
+			delay={100}
+			imageAlt=""
+			imageSrc="/images/intent.nature.png"
+			title="Ochrona przyrody"
+		>
+			Troska o środowisko to element lokalnego patriotyzmu. Musimy chronić nasze lasy,
+			łąki i rzeki jako niezastąpiony skarb przyrody i zachować go dla przyszłych pokoleń.
+		</IntentItemComponent>
+		<IntentItemComponent
+			delay={100}
+			imageAlt=""
+			imageSrc="/images/intent.sport.png"
+			title="Sport i Rekreacja"
+		>
+			Potrzebne nam są inwestycje w nowoczesną infrastrukturę sportową, organizacja
+			lokalnych turniejów i wydarzeń sportowych, aby wspierać aktywny tryb życia
+			mieszkańców.
+		</IntentItemComponent>
 	</div>
 	<a href="#" class="btn btn-outline btn-lg mx-auto">Dowiedz się więcej</a>
 </section>

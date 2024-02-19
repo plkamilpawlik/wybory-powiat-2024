@@ -1,0 +1,75 @@
+---
+import { Icon } from "astro-icon/components";
+
+export interface Props {
+	delay: number;
+	icon: string;
+	text: string;
+}
+---
+
+<div class="value-item-wrapper" data-aos="fade-up" data-aos-delay={Astro.props.delay}>
+	<div class="value-item-highlight flex h-64 w-64 bg-base-200 shadow-md">
+		<div class="m-auto flex flex-col items-center gap-6">
+			<Icon class="text-6xl" name={Astro.props.icon} />
+			<span class="tracking-wides text-lg font-bold">{Astro.props.text}</span>
+		</div>
+	</div>
+</div>
+
+<style>
+	.value-item-highlight {
+		border-radius: 12px;
+		transition: all 0.5s;
+		position: relative;
+		cursor: grab;
+	}
+
+	.value-item-highlight::before,
+	.value-item-highlight::after {
+		content: "";
+		position: absolute;
+		border-radius: 12px;
+		border: 12px solid transparent;
+		height: 0;
+		width: 0;
+	}
+
+	.value-item-highlight::before {
+		top: 0;
+		left: 0;
+	}
+
+	.value-item-highlight::after {
+		bottom: 0;
+		right: 0;
+	}
+
+	.value-item-wrapper:hover .value-item-highlight {
+		transform: scale(1.1) translateY(-16px);
+		color: #ff344b;
+	}
+
+	.value-item-wrapper:hover .value-item-highlight::before,
+	.value-item-wrapper:hover .value-item-highlight::after {
+		height: 100%;
+		width: 100%;
+	}
+
+	.value-item-wrapper:hover .value-item-highlight::before {
+		border-top-color: #ff344b;
+		border-right-color: #ff344b;
+		transition:
+			width 0.25s ease-out,
+			height 0.25s ease-out 0.25s;
+	}
+
+	.value-item-wrapper:hover .value-item-highlight::after {
+		border-bottom-color: #ff344b;
+		border-left-color: #ff344b;
+		transition:
+			border-color 0s ease-out 0.5s,
+			width 0.25s ease-out 0.5s,
+			height 0.25s ease-out 0.75s;
+	}
+</style>
