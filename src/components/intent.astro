@@ -1,5 +1,5 @@
 ---
-import { Icon } from "astro-icon/components";
+
 ---
 
 <section class="mb-24 grid min-h-screen w-full place-content-center px-4">
@@ -9,14 +9,71 @@ import { Icon } from "astro-icon/components";
 		</h4>
 		<h2 class="text-4xl font-bold tracking-wide">Moje priorytety</h2>
 		<p class="text-lg tracking-widest">
-			Wartości są moim codziennym nawigatorem, pomagającym utrzymać kurs życiowy. Zawsze
-			się nimi kieruję, bo to dla mnie pewność i sens w codziennych wyborach.
+			Bez względu na to, jak zawiła może być droga, zawsze pozostanę wierny swoim
+			fundamentalnym zasadom. To one są moim nieustannym przewodnikiem, pełniącym rolę
+			pewności i sensu w trudnych wyborach, jakie przed nami stoją.
 		</p>
 	</div>
-	<div class="container flex flex-wrap justify-center gap-12 pt-16 text-gray-400">
-		<div class="draw flex aspect-video max-w-96 flex-col">
-			<Icon class="text-9xl" name="streamline:health-care-2" />
-			<span class="tracking-wides text-3xl font-bold">Remonty dróg</span>
+	<div class="container mx-auto flex flex-wrap justify-center gap-12 py-16 text-gray-400">
+		<div class="highlight flex aspect-video max-w-96 flex-col items-center gap-6">
+			<img class="aspect-square w-64" src="/images/intent.education.png" />
+			<h3 class="tracking-wides text-3xl font-bold">Kultura i Edukacja</h3>
+			<p class="text-center">
+				Lorem ipsum dolor sit amet consectetur adipisicing elit. A eius temporibus
+				praesentium suscipit maiores veniam ex ipsum aperiam facere expedita rerum
+				magni, quaerat odit nemo! Quis quas placeat perspiciatis debitis?
+			</p>
+		</div>
+		<div class="highlight flex aspect-video max-w-96 flex-col items-center gap-6">
+			<img class="aspect-square w-64" src="/images/intent.roads.png" />
+			<h3 class="tracking-wides text-3xl font-bold">Remonty dróg</h3>
+			<p class="text-center">
+				Lorem ipsum dolor sit amet consectetur adipisicing elit. A eius temporibus
+				praesentium suscipit maiores veniam ex ipsum aperiam facere expedita rerum
+				magni, quaerat odit nemo! Quis quas placeat perspiciatis debitis?
+			</p>
+		</div>
+		<div class="highlight flex aspect-video max-w-96 flex-col items-center gap-6">
+			<img class="aspect-square w-64" src="/images/intent.health.png" />
+			<h3 class="tracking-wides text-3xl font-bold">Zdrowie publiczne</h3>
+			<p class="text-center">
+				Lorem ipsum dolor sit amet consectetur adipisicing elit. A eius temporibus
+				praesentium suscipit maiores veniam ex ipsum aperiam facere expedita rerum
+				magni, quaerat odit nemo! Quis quas placeat perspiciatis debitis?
+			</p>
+		</div>
+		<div class="highlight flex aspect-video max-w-96 flex-col items-center gap-6">
+			<img class="aspect-square w-64" src="/images/intent.nature.png" />
+			<h3 class="tracking-wides text-3xl font-bold">Ochrona przyrody</h3>
+			<p class="text-center">
+				Lorem ipsum dolor sit amet consectetur adipisicing elit. A eius temporibus
+				praesentium suscipit maiores veniam ex ipsum aperiam facere expedita rerum
+				magni, quaerat odit nemo! Quis quas placeat perspiciatis debitis?
+			</p>
+		</div>
+		<div class="highlight flex aspect-video max-w-96 flex-col items-center gap-6">
+			<img class="aspect-square w-64" src="/images/intent.sport.png" />
+			<h3 class="tracking-wides text-3xl font-bold">Sport i Rekreacja</h3>
+			<p class="text-center">
+				Lorem ipsum dolor sit amet consectetur adipisicing elit. A eius temporibus
+				praesentium suscipit maiores veniam ex ipsum aperiam facere expedita rerum
+				magni, quaerat odit nemo! Quis quas placeat perspiciatis debitis?
+			</p>
 		</div>
 	</div>
+    <a href="#" class="btn btn-outline mx-auto btn-lg">Dowiedz się więcej</a>
 </section>
+
+<style>
+	.highlight {
+		cursor: grab;
+	}
+
+	.highlight h3 {
+		transition: all 0.5s;
+	}
+
+	.highlight:hover h3 {
+		color: #ff344b;
+	}
+</style>
