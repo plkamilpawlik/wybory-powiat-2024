@@ -2,7 +2,7 @@
 import { Icon } from "astro-icon/components";
 ---
 
-<header class="drawer fixed top-0 z-50 bg-[#1f3584] bg-opacity-50 backdrop-blur-md">
+<header class="drawer fixed top-0 z-50 bg-[#1f3584]">
 	<input id="navbarDrawer" type="checkbox" class="drawer-toggle" />
 	<section id="headerComponent" class="drawer-content navbar gap-2 duration-300 ease-in-out">
 		<div class="container mx-auto">
@@ -37,9 +37,9 @@ import { Icon } from "astro-icon/components";
 
 	document.addEventListener("scroll", () => {
 		if (document.body.getBoundingClientRect().y >= 0) {
-			headerComponent?.classList.remove("backdrop-blur-md", "shadow-lg");
+			headerComponent?.classList.remove("shadow-xl");
 		} else {
-			headerComponent?.classList.add("backdrop-blur-md", "shadow-lg");
+			headerComponent?.classList.add("shadow-xl");
 		}
 	});
 </script>
