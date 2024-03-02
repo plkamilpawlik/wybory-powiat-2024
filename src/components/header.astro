@@ -6,14 +6,14 @@ import { Icon } from "astro-icon/components";
 	<input id="navbarDrawer" type="checkbox" class="drawer-toggle" />
 	<section id="headerComponent" class="drawer-content navbar gap-2 duration-300 ease-in-out">
 		<div class="container mx-auto">
-			<a class="btn btn-ghost mr-auto text-white">
+			<a href="#" class="btn btn-ghost mr-auto text-white">
 				<Icon class="text-3xl text-[#ff344b]" name="gg:check-r" />
 				<span class="text-2xl">Kamil Pawlik 2024</span>
 			</a>
 			<nav class="hidden gap-2 md:flex">
-				<a href="#" class="btn btn-ghost text-lg text-white">O mnie</a>
-				<a href="#" class="btn btn-ghost text-lg text-white">Program</a>
-				<a href="#" class="btn btn-ghost text-lg text-white">Kontakt</a>
+				<a href="#aboutme" class="btn btn-ghost text-lg text-white">O mnie</a>
+				<a href="#program" class="btn btn-ghost text-lg text-white">Program</a>
+				<a href="#contact" class="btn btn-ghost text-lg text-white">Kontakt</a>
 			</nav>
 			<label for="navbarDrawer" class="btn btn-square btn-outline text-white md:hidden">
 				<Icon class="text-3xl" name="gg:menu-right" />
@@ -24,9 +24,9 @@ import { Icon } from "astro-icon/components";
 		<label for="navbarDrawer" aria-label="close sidebar" class="drawer-overlay"></label>
 		<nav class="menu min-h-full w-80 justify-center bg-base-200 p-4 text-base-content">
 			<div class="divider mb-6">Kamil Pawlik</div>
-			<a href="#" class="btn btn-ghost text-xl">O mnie</a>
-			<a href="#" class="btn btn-ghost text-xl">Program</a>
-			<a href="#" class="btn btn-ghost text-xl">Kontakt</a>
+			<a href="#aboutme" class="btn btn-ghost text-xl">O mnie</a>
+			<a href="#program" class="btn btn-ghost text-xl">Program</a>
+			<a href="#contact" class="btn btn-ghost text-xl">Kontakt</a>
 			<div class="divider mt-6">Powiat 2024</div>
 		</nav>
 	</section>
