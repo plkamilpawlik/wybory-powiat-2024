@@ -1,5 +1,10 @@
 ---
+const electionDay = new Date("2024-04-07T07:00+02:00");
+const currentDate = new Date();
 
+const deltaTime = Math.max(electionDay.getTime() - currentDate.getTime(), 0);
+const numDaysLeft = Math.floor(deltaTime / 1000 / 60 / 60 / 24);
+const strDaysLeft = numDaysLeft === 1 ? "1 dzień" : `${numDaysLeft} dni`;
 ---
 
 <section id="programBanner" class="grid min-h-screen w-full place-content-center py-16">
@@ -16,7 +21,7 @@
 		<div class="relative m-4">
 			<div class="stats absolute -bottom-12 z-10 shadow">
 				<div class="stat">
-					<div class="stat-value text-[#ff344b]">34 dni</div>
+					<div class="stat-value text-[#ff344b]">{strDaysLeft}</div>
 					<div class="stat-title">do wyborów samorządowych</div>
 				</div>
 			</div>
