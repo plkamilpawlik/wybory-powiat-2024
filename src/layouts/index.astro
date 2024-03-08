@@ -39,11 +39,9 @@ interface Props {
 			}
 		</style>
 	</head>
-	<body class="fixed h-screen w-screen overflow-y-scroll">
+	<body>
 		<HeaderComponent />
-		<main class="mb-16 min-h-screen">
-			<slot />
-		</main>
+		<slot />
 		<FooterComponent />
 		<script>
 			import { initAOS } from "@/scripts/aos";
