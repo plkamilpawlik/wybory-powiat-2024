@@ -1,10 +1,5 @@
 ---
-const electionDay = new Date("2024-04-07T07:00+02:00");
-const currentDate = new Date();
 
-const deltaTime = Math.max(electionDay.getTime() - currentDate.getTime(), 0);
-const numDaysLeft = Math.floor(deltaTime / 1000 / 60 / 60 / 24);
-const strDaysLeft = numDaysLeft <= 1 ? "1 dzień" : `${numDaysLeft} dni`;
 ---
 
 <section id="programBanner" class="grid min-h-screen w-full place-content-center py-16">
@@ -21,8 +16,12 @@ const strDaysLeft = numDaysLeft <= 1 ? "1 dzień" : `${numDaysLeft} dni`;
 		<div class="relative m-4">
 			<div class="stats absolute -bottom-12 z-10 shadow">
 				<div class="stat">
-					{numDaysLeft < 1 && <div class="stat-title">Mniej niż</div>}
-					<div class="stat-value text-[#ff344b]">{strDaysLeft}</div>
+					<div class="stat-value">
+						<span class="countdown text-center text-[#ff344b]">
+							<span id="programBannerCountdown" style="--value: 0;"></span>
+						</span>
+						dni
+					</div>
 					<div class="stat-title">do wyborów samorządowych</div>
 				</div>
 			</div>
@@ -36,6 +35,32 @@ const strDaysLeft = numDaysLeft <= 1 ? "1 dzień" : `${numDaysLeft} dni`;
 		</div>
 	</div>
 </section>
+
+<script>
+	const electionDay = new Date("2024-04-07T07:00+02:00");
+	const currentDate = new Date();
+
+	const deltaTime = Math.max(electionDay.getTime() - currentDate.getTime(), 0);
+	const daysLeft = Math.floor(deltaTime / 1000 / 60 / 60 / 24);
+
+	const programBannerCountdown = document.querySelector<HTMLSpanElement>(
+		"#programBannerCountdown",
+	)!;
+
+	new IntersectionObserver(
+		(entries) => {
+			const entry = entries.find((entry) => entry.target === programBannerCountdown);
+
+			if (!!entry && entry.isIntersecting) {
+				programBannerCountdown.style.setProperty("--value", daysLeft.toString());
+			}
+		},
+		{
+			rootMargin: "-100px",
+			threshold: 1.0,
+		},
+	).observe(programBannerCountdown);
+</script>
 
 <style>
 	#programBanner {

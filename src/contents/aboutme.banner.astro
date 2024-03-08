@@ -16,7 +16,12 @@
 		<div class="relative m-4">
 			<div class="stats absolute -bottom-12 z-10 shadow">
 				<div class="stat">
-					<div class="stat-value text-[#ff344b]">24 lata</div>
+					<div class="stat-value">
+						<span class="countdown text-center text-[#ff344b]">
+							<span id="aboutmeBannerCountdown" style="--value: 0;"></span>
+						</span>
+						lata
+					</div>
 					<div class="stat-title">pasji do odkrywania świata</div>
 				</div>
 			</div>
@@ -30,6 +35,26 @@
 		</div>
 	</div>
 </section>
+
+<script>
+	const aboutmeBannerCountdown = document.querySelector<HTMLSpanElement>(
+		"#aboutmeBannerCountdown",
+	)!;
+
+	new IntersectionObserver(
+		(entries) => {
+			const entry = entries.find((entry) => entry.target === aboutmeBannerCountdown);
+
+			if (!!entry && entry.isIntersecting) {
+				aboutmeBannerCountdown.style.setProperty("--value", "24");
+			}
+		},
+		{
+			rootMargin: "-100px",
+			threshold: 1.0,
+		},
+	).observe(aboutmeBannerCountdown);
+</script>
 
 <style>
 	#aboutmeBanner {
